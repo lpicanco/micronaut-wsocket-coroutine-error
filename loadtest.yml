@@ -1,0 +1,12 @@
+scenarios:
+  - engine: ws
+    flow:
+      - loop:
+          - send: "Test"
+        count: 10
+
+config:
+  target: "ws://localhost:8080"
+  phases:
+    - duration: 10
+      arrivalRate: 50
